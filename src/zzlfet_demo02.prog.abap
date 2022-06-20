@@ -639,7 +639,7 @@ AT SELECTION-SCREEN OUTPUT.
 
 AT SELECTION-SCREEN.
 
-  "Seten der Bedingungswerte
+  "Setzen der Bedingungswerte
   werte->set_bedingungswert(
     bedingung = zif_risikoanalyse=>c_bedingungen-b01_rechtl_rahmenbedingung
     wert = p_legal ).
