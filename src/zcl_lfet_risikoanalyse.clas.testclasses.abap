@@ -8,6 +8,15 @@ CLASS ltcl_simple DEFINITION FINAL FOR TESTING
     "Die Bedingungswerte
     DATA werte TYPE REF TO zif_lfet_values.
 
+    "constants
+    CONSTANTS c_rule_1 TYPE string VALUE `1`.
+    CONSTANTS c_rule_2 TYPE string VALUE `2`.
+    CONSTANTS c_rule_3 TYPE string VALUE `3`.
+    CONSTANTS c_rule_4 TYPE string VALUE `4`.
+    CONSTANTS c_rule_5 TYPE string VALUE `5`.
+    CONSTANTS c_rule_6 TYPE string VALUE `6`.
+    CONSTANTS c_rule_7 TYPE string VALUE `7`.
+
     METHODS setup.
     METHODS test_et
       IMPORTING
@@ -28,14 +37,13 @@ ENDCLASS.
 
 CLASS ltcl_simple IMPLEMENTATION.
 
-
   METHOD r01.
     test_et(
       b01  = zif_lfet_risikoanalyse=>c_rechtl_rahmenbedingungen-keine
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int1
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-mittel
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-nicht_notwendig
-      rule = '1' ).
+      rule = c_rule_1 ).
   ENDMETHOD.
 
   METHOD r02.
@@ -44,7 +52,7 @@ CLASS ltcl_simple IMPLEMENTATION.
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int2plus
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-klein
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-nicht_notwendig
-      rule = '2' ).
+      rule = c_rule_2 ).
   ENDMETHOD.
 
   METHOD r03.
@@ -53,7 +61,7 @@ CLASS ltcl_simple IMPLEMENTATION.
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int2plus
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-mittel
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-empfohlen
-      rule = '3' ).
+      rule = c_rule_3 ).
   ENDMETHOD.
 
   METHOD r04.
@@ -62,7 +70,7 @@ CLASS ltcl_simple IMPLEMENTATION.
     b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int2plus
     b03  = zif_lfet_risikoanalyse=>c_projektumfang-gross
     a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-empfohlen
-    rule = '4' ).
+    rule = c_rule_4 ).
   ENDMETHOD.
 
   METHOD r05.
@@ -71,7 +79,7 @@ CLASS ltcl_simple IMPLEMENTATION.
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-ext1plus
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-mittel
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-empfohlen
-      rule = '5' ).
+      rule = c_rule_5 ).
   ENDMETHOD.
 
   METHOD r06.
@@ -80,7 +88,7 @@ CLASS ltcl_simple IMPLEMENTATION.
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int1
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-mittel
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-empfohlen
-      rule = '6' ).
+      rule = c_rule_6 ).
   ENDMETHOD.
 
   METHOD r07.
@@ -89,7 +97,7 @@ CLASS ltcl_simple IMPLEMENTATION.
       b02  = zif_lfet_risikoanalyse=>c_ressourcenabhaengigkeit-int1
       b03  = zif_lfet_risikoanalyse=>c_projektumfang-klein
       a01  = zif_lfet_risikoanalyse=>c_risikoanalyse-notwendig
-      rule = '7' ).
+      rule = c_rule_7 ).
   ENDMETHOD.
 
   METHOD setup.
