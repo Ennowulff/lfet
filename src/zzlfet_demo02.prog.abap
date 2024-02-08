@@ -36,7 +36,6 @@ INTERFACE zif_lfet_values.
       number_of_rules TYPE csequence
       version         TYPE csequence.
 
-
   "! Dokumentation der verwendeten Regel
   METHODS dotrace
     IMPORTING
