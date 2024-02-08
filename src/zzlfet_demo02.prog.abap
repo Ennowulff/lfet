@@ -1,6 +1,5 @@
 REPORT zzlfet_demo02.
 
-
 "!<p class="shorttext" lang="DE">Interface zur Verwaltung der Bedingungswerte</p>
 "! Dies ist ein zentrales Interface und wird von allen Entscheidungstabellen verwendet.
 INTERFACE zif_lfet_values.
