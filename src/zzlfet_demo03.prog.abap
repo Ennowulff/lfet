@@ -1,6 +1,5 @@
 REPORT zzlfet_demo03.
 
-
 "GUI zur Eingabe der Bedingungswerte
 PARAMETERS p_legal TYPE char10 LOWER CASE DEFAULT 'vorh'.
 PARAMETERS p_rssrc TYPE char10 LOWER CASE DEFAULT 'int1'.
